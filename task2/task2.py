@@ -1,8 +1,13 @@
 import math
+import sys
 
-# ввод данных
-data_circle = input()
-data_points = input()
+if sys.argv and len(sys.argv) > 2:  # если из командной строки
+    data_circle = sys.argv[1]
+    data_points = sys.argv[2]
+else:                               # если из консоли
+    data_circle = input()
+    data_points = input()
+
 # данные окружности
 file_circle = open(data_circle, 'r')
 line = file_circle.readline()

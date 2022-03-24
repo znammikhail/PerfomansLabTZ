@@ -1,5 +1,11 @@
-n = int(input())
-m = int(input())
+import sys
+
+if sys.argv and len(sys.argv) > 2:  # если из командной строки
+        n = sys.argv[1]
+        m = sys.argv[2]
+else:                               # если из консоли
+    n = int(input())
+    m = int(input())
 
 cnt = 0
 list = [1]

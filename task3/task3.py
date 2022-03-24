@@ -1,9 +1,17 @@
 import json
+import sys
 
-with open("tests.json", "r") as tests_file:
+if sys.argv and len(sys.argv) > 2:  # если из командной строки
+    tests = sys.argv[1]
+    values = sys.argv[2]
+else:                               # если из консоли
+    tests = input()
+    values = input()
+
+with open(tests, "r") as tests_file:
     data_tests = json.load(tests_file)
 
-with open("values.json", "r") as values_file:
+with open(values, "r") as values_file:
     data_values = json.load(values_file)
 
 data_values = data_values['values']

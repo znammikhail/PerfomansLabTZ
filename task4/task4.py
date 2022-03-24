@@ -1,4 +1,12 @@
-data = input()
+import sys
+
+if sys.argv and len(sys.argv) > 1:  # если из командной строки
+        data = sys.argv[1]
+
+else:                               # если из консоли
+    data = input()
+
+
 file_data = open(data, 'r')
 nums = []
 
